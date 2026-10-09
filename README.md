@@ -30,12 +30,18 @@ React + TypeScript + Vite website for CLICKWORTHY BY DTC.
 The `/portfolio` page is intentionally a holding page without invented client work. Add real, permission-cleared photos and videos later, then build a portfolio gallery.
 
 ## Contact
-The enquiry form opens the visitor's email application (`mailto:`). It is **not** a server-side form. WhatsApp, email and Instagram links are available. To enable a server-submitted form, add a verified Cloudflare Pages Function and an email delivery service with secure server-side secrets.
+The contact form uses `@formspree/react` with Formspree form ID `xkjoradp` and submits directly without needing an email app. Verify the destination email address and notifications in the Formspree dashboard. The Formspree dashboard manages the submissions, and free-plan limits are subject to Formspree terms. Test by sending a single enquiry after deployment. Social links include Instagram, the company LinkedIn page and Divya Chheda's LinkedIn profile.
+
+## V2 changes / GitHub upload
+Replace only `src/main.tsx`, `src/data.ts`, `src/style.css`, `package.json`, and `README.md`; add new `src/ContactForm.tsx`. Do not delete the other existing files. The original logo is unchanged. Cloudflare Pages will rebuild automatically after the commit to `main` (if Git integration is enabled). Build command is `npm run build` and output directory is `dist`.
+
+Routing now scrolls to the top when navigating between pages, except when a link targets a services section like `/services#photography`. A floating back-to-top button appears after scrolling.
 
 ## Before public launch
 - Verify the legal enterprise name on the Udyam certificate.
 - Confirm any formal Razorpay, PhonePe and Shiprocket partnership claims before using badges.
-- Review Privacy Policy and Terms drafts for actual data practices and legal compliance.
+- Review Privacy Policy and Terms drafts for actual data practices and legal compliance, including use of Formspree.
+- Confirm Formspree form ID, receiving email and spam/notification settings; submit one live test enquiry.
 - Test all links, forms and responsive layouts.
 - Confirm domain and business email DNS records.
 - Consider static prerendering for stronger search engine crawling; this version uses client-side React routing.
