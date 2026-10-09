@@ -3,3 +3,26 @@
 @media(max-width:900px){.herogrid,.split,.ai,.contactgrid{grid-template-columns:1fr;gap:35px}.herogrid{padding-top:90px}.heroart{height:310px}.heroart img{max-width:260px}.ring{height:300px;width:300px}.servicegrid,.items{grid-template-columns:repeat(2,1fr)}.audiences,.process{grid-template-columns:repeat(2,1fr)}.footergrid{grid-template-columns:repeat(2,1fr)}.nav nav{gap:18px}.navcta{display:none}}
 @media(max-width:620px){.wrap{width:calc(100% - 36px)}.section{padding:70px 0}.nav{height:70px}.brand{font-size:.9rem}.brand img{width:44px;height:44px}.hamb{display:block}.nav nav{display:none;position:absolute;top:70px;left:0;right:0;background:#111b27;padding:25px;flex-direction:column;border-bottom:1px solid #304255}.nav nav.open{display:flex}.hero h1{font-size:clamp(2.7rem,10vw,4.2rem)}.herogrid{padding-top:55px}.heroart{height:260px}.heroart img{max-width:205px}.ring{width:250px;height:250px}.trust .wrap{display:grid;grid-template-columns:1fr 1fr;font-size:.62rem}.servicegrid,.audiences,.items,.process,.footergrid,.facts{grid-template-columns:1fr}.servicecard{min-height:270px}.aiicon{height:230px;width:230px}.cta{padding:38px 25px}.pagehero{padding:80px 0 55px}.pagehero h1{font-size:2.9rem}.contactform{padding:20px}.footend{flex-direction:column}.detailtitle h2{font-size:1.9rem}.actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* V2 additions: working Formspree enquiry form, LinkedIn links and scroll controls */
+.socialline{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0 36px}
+.socialline a{display:inline-flex;align-items:center;gap:8px;color:#38b6ff;font-size:.92rem}
+.socialline a:hover{text-decoration:underline}
+.fieldrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.fieldrow label{min-width:0}
+.contactform .formerror{font-size:.82rem;color:#ffb6ae;line-height:1.5;margin:7px 0}
+.contactform input:focus-visible,.contactform select:focus-visible,.contactform textarea:focus-visible{outline:2px solid #38b6ff;outline-offset:2px}
+.contactform button:disabled{opacity:.65;cursor:wait;transform:none}
+.contactform .consent{align-items:flex-start;line-height:1.6}
+.contactform .consent input{margin-top:4px;flex-shrink:0}
+.contactform .consent a,.form-success a{color:#38b6ff;text-decoration:underline}
+.form-gotcha{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.form-submit{margin-top:8px}
+.formnote{font-size:.78rem;margin:16px 0 0;color:#91a5bb}
+.form-success{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:360px}
+.form-success>svg{color:#38b6ff;margin-bottom:16px}
+.form-success .btn{margin-top:18px}
+.backtotop{position:fixed;bottom:26px;right:26px;z-index:45;display:flex;align-items:center;justify-content:center;gap:6px;background:#38b6ff;color:#081019;border:1px solid #8ad7ff;border-radius:999px;padding:13px 17px;box-shadow:0 10px 34px #0009;font-weight:700;font-size:.77rem;transition:transform .2s,background .2s}
+.backtotop:hover{transform:translateY(-4px);background:#8ed8ff}
+.backtotop:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:620px){.fieldrow{grid-template-columns:1fr}.backtotop{right:15px;bottom:18px;padding:12px}.backtotop span{display:none}}
