@@ -4,6 +4,7 @@ import{BrowserRouter,Link,useLocation}from'react-router-dom';
 import{Camera,Video,Megaphone,ShoppingBag,Globe,CreditCard,ArrowUpRight,Menu,X,Mail,MessageCircle,Instagram,Linkedin,ArrowUp,Sparkles}from'lucide-react';
 import{business,services,audiences}from'./data';
 import ContactForm from './ContactForm';
+import PortfolioPage from './PortfolioPage';
 import './style.css';
 const icons=[Camera,Video,Megaphone,ShoppingBag,Globe,CreditCard];
 const Btn=({to,children}:{to:string,children:React.ReactNode})=>to.startsWith('/')?<Link className="btn" to={to}>{children} ↗</Link>:<a className="btn" href={to} target="_blank" rel="noreferrer">{children} ↗</a>;
