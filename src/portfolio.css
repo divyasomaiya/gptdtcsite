@@ -1,0 +1,777 @@
+
+/* CLICKWORTHY BY DTC — V3 PORTFOLIO */
+/* Scoped styling: does not modify the other pages. */
+
+.dtcp-page {
+  background: #080b10;
+  color: #f4f8ff;
+}
+
+.dtcp-page * {
+  box-sizing: border-box;
+}
+
+.dtcp-page button,
+.dtcp-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dtcp-page button:focus-visible,
+.dtcp-page a:focus-visible {
+  outline: 3px solid #38b6ff;
+  outline-offset: 4px;
+}
+
+.dtcp-kicker {
+  display: block;
+  color: #38b6ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.dtcp-page h1,
+.dtcp-page h2,
+.dtcp-page h3 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.dtcp-page em {
+  color: #38b6ff;
+  font-style: normal;
+}
+
+/* HERO */
+
+.dtcp-hero {
+  padding: 76px 0 52px;
+  border-bottom: 1px solid #243246;
+  background:
+    radial-gradient(
+      ellipse at 85% 10%,
+      #12334a 0%,
+      transparent 55%
+    ),
+    #080b10;
+}
+
+.dtcp-hero h1 {
+  margin: 18px 0 20px;
+  font-size: clamp(2.8rem, 6vw, 5.7rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
+.dtcp-hero p {
+  max-width: 690px;
+  color: #afbed0;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* CONTENT AND TABS */
+
+.dtcp-content {
+  padding-top: 32px;
+  padding-bottom: 82px;
+}
+
+.dtcp-tabs {
+  display: flex;
+  gap: 6px;
+  width: fit-content;
+  padding: 6px;
+  background: #151e2a;
+  border: 1px solid #2c3b4e;
+  border-radius: 11px;
+  margin-bottom: 62px;
+}
+
+.dtcp-tabs button {
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #becad9;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.dtcp-tabs button:hover {
+  color: white;
+}
+
+.dtcp-tabs button.dtcp-active {
+  background: #38b6ff;
+  color: #07101a;
+}
+
+.dtcp-loading {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.dtcp-gallery-section {
+  margin-bottom: 85px;
+}
+
+.dtcp-gallery-section:last-child {
+  margin-bottom: 0;
+}
+
+.dtcp-section-heading {
+  margin-bottom: 30px;
+}
+
+.dtcp-section-heading h2 {
+  margin: 12px 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.045em;
+}
+
+.dtcp-section-heading p {
+  max-width: 650px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.dtcp-empty {
+  min-height: 170px;
+  border: 1px dashed #34485d;
+  border-radius: 10px;
+  background: #111923;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #38b6ff;
+  text-align: center;
+  padding: 25px;
+}
+
+.dtcp-empty p {
+  margin: 0;
+}
+
+/* VIDEO GALLERY */
+
+.dtcp-video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+  align-items: start;
+}
+
+.dtcp-video-grid.dtcp-count-1 {
+  grid-template-columns: minmax(0, 340px);
+}
+
+.dtcp-video-grid.dtcp-count-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 790px;
+}
+
+.dtcp-video-grid.dtcp-count-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dtcp-video-card {
+  overflow: hidden;
+  background: #141e2a;
+  border: 1px solid #2a394d;
+  border-radius: 11px;
+  min-width: 0;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.dtcp-video-card:hover {
+  border-color: #38b6ff;
+  transform: translateY(-4px);
+}
+
+.dtcp-poster {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #38b6ff;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #214966,
+      #101b2b 65%,
+      #0d141e
+    );
+}
+
+.dtcp-portrait .dtcp-poster {
+  aspect-ratio: 9 / 16;
+}
+
+.dtcp-landscape .dtcp-poster {
+  aspect-ratio: 16 / 9;
+}
+
+.dtcp-poster > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dtcp-play {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #38b6ff;
+  color: #081019;
+  box-shadow: 0 8px 35px #0008;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.dtcp-poster:hover .dtcp-play {
+  background: #a0e1ff;
+  transform: scale(1.1);
+}
+
+.dtcp-poster-label {
+  position: absolute;
+  z-index: 1;
+  bottom: 13px;
+  left: 13px;
+  color: white;
+  background: #080b10c9;
+  border-radius: 5px;
+  padding: 7px 9px;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.dtcp-card-content {
+  padding: 20px;
+}
+
+.dtcp-category {
+  display: block;
+  color: #38b6ff;
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  margin-bottom: 9px;
+}
+
+.dtcp-card-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.dtcp-card-content p {
+  margin: 0 0 12px;
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+.dtcp-card-content small {
+  color: #9aacc2;
+  font-size: 0.73rem;
+}
+
+/* PHOTOGRAPHY COLLECTIONS */
+
+.dtcp-photo-collection {
+  margin-top: 43px;
+  margin-bottom: 64px;
+}
+
+.dtcp-collection-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.dtcp-collection-heading h3 {
+  margin: 10px 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.dtcp-collection-heading p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.dtcp-count {
+  color: #a8bbce;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.dtcp-photo-grid {
+  columns: 4;
+  column-gap: 15px;
+}
+
+.dtcp-photo-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 15px;
+  border: 1px solid #2d3c4c;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: #152132;
+  break-inside: avoid;
+  text-align: left;
+}
+
+.dtcp-photo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s;
+}
+
+.dtcp-photo-card:hover img {
+  transform: scale(1.035);
+}
+
+.dtcp-photo-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 35px 13px 12px;
+  background: linear-gradient(
+    transparent,
+    #05090de8
+  );
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.dtcp-photo-label strong {
+  font-size: 0.85rem;
+}
+
+.dtcp-photo-label small {
+  color: #cbd8e6;
+}
+
+.dtcp-photo-card:hover .dtcp-photo-label,
+.dtcp-photo-card:focus-visible .dtcp-photo-label {
+  opacity: 1;
+}
+
+/* APPROACH */
+
+.dtcp-approach {
+  padding: 90px 0;
+  border-top: 1px solid #273648;
+  background: #101721;
+}
+
+.dtcp-approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+}
+
+.dtcp-approach h2 {
+  margin-top: 18px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.dtcp-approach p {
+  line-height: 1.8;
+}
+
+.dtcp-equipment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.dtcp-equipment span {
+  border: 1px solid #37536a;
+  border-radius: 999px;
+  padding: 10px 17px;
+  color: #cfeaff;
+  font-size: 0.83rem;
+}
+
+/* ABOUT DIVYA */
+
+.dtcp-founder {
+  padding: 105px 0;
+  border-top: 1px solid #26374a;
+}
+
+.dtcp-founder-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 85px;
+  align-items: start;
+}
+
+.dtcp-founder-identity {
+  position: sticky;
+  top: 110px;
+}
+
+.dtcp-monogram {
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  border: 1px solid #38b6ff66;
+  border-radius: 20px;
+  color: #38b6ff;
+  background: #111f2f;
+  font: 600 2.7rem "Space Grotesk", sans-serif;
+}
+
+.dtcp-founder h2 {
+  margin: 15px 0 17px;
+  font-size: clamp(2.1rem, 4vw, 3.8rem);
+}
+
+.dtcp-founder-tagline {
+  color: #d2e2f0;
+  font-size: 1.05rem;
+}
+
+.dtcp-founder-bio p {
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.dtcp-founder-bio h3 {
+  margin: 32px 0 16px;
+  color: white;
+  font-size: 1.45rem;
+}
+
+.dtcp-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.dtcp-tools span {
+  padding: 9px 13px;
+  border: 1px solid #30445b;
+  border-radius: 6px;
+  background: #111b27;
+  color: #cad9e8;
+  font-size: 0.8rem;
+}
+
+.dtcp-founder-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.dtcp-founder-socials a,
+.dtcp-connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #38b6ff;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.dtcp-connect-link {
+  margin-top: 15px;
+}
+
+/* MODAL AND MEDIA VIEWERS */
+
+.dtcp-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #03060af5;
+  padding: 55px 70px 25px;
+}
+
+.dtcp-modal-close,
+.dtcp-prev,
+.dtcp-next {
+  position: absolute;
+  z-index: 1002;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #172536;
+  border: 1px solid #46627d;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.dtcp-modal-close {
+  top: 15px;
+  right: 20px;
+}
+
+.dtcp-prev {
+  left: 14px;
+  top: 50%;
+}
+
+.dtcp-next {
+  right: 14px;
+  top: 50%;
+}
+
+.dtcp-video-dialog,
+.dtcp-photo-dialog {
+  width: min(100%, 1050px);
+  max-height: 92vh;
+  overflow: auto;
+  text-align: center;
+}
+
+.dtcp-video-dialog video {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  margin: auto;
+  background: #000;
+  object-fit: contain;
+}
+
+.dtcp-video-dialog .dtcp-player-portrait {
+  width: auto;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+.dtcp-video-dialog .dtcp-player-landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.dtcp-photo-dialog img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 72vh;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+
+.dtcp-modal-info {
+  padding: 15px 10px 10px;
+  color: #eaf4ff;
+}
+
+.dtcp-modal-info h3 {
+  margin: 0 0 5px;
+  font-size: 1.15rem;
+}
+
+.dtcp-modal-info p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.dtcp-fullscreen {
+  margin: 10px auto;
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid #3b5267;
+  border-radius: 5px;
+  color: white;
+  background: #172536;
+  cursor: pointer;
+}
+
+.dtcp-photo-dialog:fullscreen {
+  width: 100vw;
+  max-height: none;
+  background: #03060a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dtcp-photo-dialog:fullscreen img {
+  max-height: 85vh;
+}
+
+/* TABLETS */
+
+@media (max-width: 1024px) {
+  .dtcp-video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dtcp-photo-grid {
+    columns: 3;
+  }
+
+  .dtcp-founder-grid,
+  .dtcp-approach-grid {
+    gap: 35px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .dtcp-hero {
+    padding: 54px 0 36px;
+  }
+
+  .dtcp-hero h1 {
+    font-size: clamp(2.5rem, 9vw, 4rem);
+  }
+
+  .dtcp-tabs {
+    width: 100%;
+    margin-bottom: 42px;
+  }
+
+  .dtcp-tabs button {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 0.82rem;
+  }
+
+  .dtcp-video-grid,
+  .dtcp-video-grid.dtcp-count-1,
+  .dtcp-video-grid.dtcp-count-2,
+  .dtcp-video-grid.dtcp-count-3 {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 440px;
+    margin-inline: auto;
+  }
+
+  .dtcp-photo-grid {
+    columns: 2;
+    column-gap: 9px;
+  }
+
+  .dtcp-photo-card {
+    margin-bottom: 9px;
+  }
+
+  .dtcp-photo-label {
+    opacity: 1;
+    padding: 25px 8px 8px;
+  }
+
+  .dtcp-photo-label strong {
+    font-size: 0.68rem;
+  }
+
+  .dtcp-photo-label small {
+    font-size: 0.62rem;
+  }
+
+  .dtcp-collection-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dtcp-approach,
+  .dtcp-founder {
+    padding: 65px 0;
+  }
+
+  .dtcp-approach-grid,
+  .dtcp-founder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dtcp-founder-identity {
+    position: static;
+  }
+
+  .dtcp-monogram {
+    width: 82px;
+    height: 82px;
+    font-size: 2rem;
+  }
+
+  .dtcp-modal {
+    padding: 55px 12px 25px;
+  }
+
+  .dtcp-prev {
+    left: 5px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .dtcp-next {
+    right: 5px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .dtcp-modal-close {
+    right: 12px;
+  }
+
+  .dtcp-photo-dialog img {
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 380px) {
+  .dtcp-photo-grid {
+    columns: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dtcp-page *,
+  .dtcp-page *::before,
+  .dtcp-page *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
