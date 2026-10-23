@@ -567,7 +567,7 @@ export default function PortfolioPage() {
                 LinkedIn <ExternalLink size={14} />
               </a>
               <a
-                href="https://www.instagram.com/clickworthybydtc/"
+                href="https://www.instagram.com/divyap_creator/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
