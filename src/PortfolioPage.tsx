@@ -15,6 +15,9 @@ import {
   Linkedin,
   Instagram,
   ExternalLink,
+  GraduationCap,
+  Sparkles,
+  Award,
 } from "lucide-react";
 
 import {
@@ -626,6 +629,107 @@ export default function PortfolioPage() {
                 <span key={tool}>{tool}</span>
               ))}
             </div>
+
+<div
+  style={{
+    background: "#101720",
+    border: "1px solid #263749",
+    borderRadius: "18px",
+    padding: "clamp(20px, 3vw, 32px)",
+    marginTop: "38px",
+    marginBottom: "34px",
+  }}
+>
+  <span
+    style={{
+      color: "#38b6ff",
+      fontSize: "12px",
+      fontWeight: 700,
+      letterSpacing: "1.5px",
+    }}
+  >
+    ABOUT DIVYA CHHEDA
+  </span>
+
+  <h3
+    style={{
+      margin: "12px 0 26px",
+      color: "#ffffff",
+      fontSize: "clamp(20px, 2.5vw, 26px)",
+    }}
+  >
+    Experience & Credentials
+  </h3>
+
+  {[
+    {
+      icon: GraduationCap,
+      title: "Diploma in Photography",
+      detail: "Le Mark Institute · 2025",
+    },
+    {
+      icon: Sparkles,
+      title: "Gemini Student Ambassador",
+      detail: "Since August 2026",
+    },
+    {
+      icon: Award,
+      title: "Google Prompting Essentials & Canva Learning",
+      detail: "AI prompting, design and digital communication",
+    },
+    {
+      icon: Camera,
+      title: "Event Media Leadership",
+      detail: "Harmony Fest · Hooner Fest",
+    },
+  ].map((item) => {
+    const Icon = item.icon;
+
+    return (
+      <div
+        key={item.title}
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          gap: "16px",
+          marginBottom: "24px",
+        }}
+      >
+        <Icon
+          size={23}
+          color="#38b6ff"
+          style={{ flexShrink: 0, marginTop: "3px" }}
+          aria-hidden="true"
+        />
+
+        <div>
+          <strong
+            style={{
+              display: "block",
+              color: "#f5f8fc",
+              fontSize: "16px",
+              lineHeight: 1.5,
+            }}
+          >
+            {item.title}
+          </strong>
+
+          <span
+            style={{
+              display: "block",
+              color: "#aab9cb",
+              fontSize: "14px",
+              marginTop: "5px",
+              lineHeight: 1.6,
+            }}
+          >
+            {item.detail}
+          </span>
+        </div>
+      </div>
+    );
+  })}
+</div>
 
             <h3>Let's Connect</h3>
             <p>
